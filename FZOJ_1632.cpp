@@ -4,7 +4,7 @@ using namespace std;
 struct node{
   int value;
   int cost;
-}
+};
 vector<node> vec[15];
 int n,m,t;
 int dp[500];
@@ -14,7 +14,7 @@ int main(){
   	node temp;
   	scanf("%d%d",&temp.cost,&temp.value);
   	int _t;scanf("%d",&_t);
-  	vec[t].push_back(temp);
+  	vec[_t].push_back(temp);
   }
   
   for(int i=1;i<=t;i++){
@@ -26,5 +26,5 @@ int main(){
   	}
   }
   printf("%d",dp[m]);
-  reutnr 0;
+  return 0;
 }
