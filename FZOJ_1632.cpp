@@ -18,11 +18,13 @@ int main(){
   }
   
   for(int i=1;i<=t;i++){
-  	for(int j=1;j<=m;j++){
+  	for(int j=m;j>=1;j--){
   		for(vector<node>::iterator it=vec[i].begin();it!=vec[i].end();it++){
-  			node temp
+  			node temp=*it;
+  			if(j-temp.cost>=0) dp[j]=max(dp[j],dp[j-temp.cost]+temp.value);
   		}
   	}
   }
+  printf("%d",dp[m]);
   reutnr 0;
 }
